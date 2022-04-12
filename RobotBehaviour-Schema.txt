@@ -11,7 +11,7 @@ BEGIN
         travelSide INTEGER (-1..1) DEFAULT 1,
         travelDirection INTEGER (-1..1) DEFAULT 1,
         travelReverseDistance INTEGER DEFAULT 20,
-        soundMatrix sound?
+        --soundMatrix sound?--
         shyDistanceDynamic INTEGER DEFAULT 600,
         shyDistanceStatic INTEGER DEFAULT 200,
         shyDistanceStandBack INTEGER DEFAULT 1800,

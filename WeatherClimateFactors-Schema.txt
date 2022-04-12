@@ -4,10 +4,10 @@ BEGIN
     {
         maxWindSpeed INTEGER DEFAULT 50,
         actualWindSpeed INTEGER,
-        minTemperature INTEGER, DEFAULT -20,
+        minTemperature INTEGER DEFAULT -20,
         actualTemperature INTEGER,
-        maxTemperature INTEGER, DEFAULT 40,
-        maxCoverSnow INTEGER, DEFAULT 60,
+        maxTemperature INTEGER DEFAULT 40,
+        maxCoverSnow INTEGER DEFAULT 60,
         actualSnowCover INTEGER,
         minSnowCover INTEGER DEFAULT 30,
         snowFallRate INTEGER,

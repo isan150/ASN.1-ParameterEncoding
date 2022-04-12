@@ -9,7 +9,7 @@ BEGIN
         vehicleWidth INTEGER,
         vehicleHeight INTEGER,
         vechicleGrossWeight INTEGER,
-        vechicleEmissionClassification UTF8STRING DEFAULT 'Low',
+        vechicleEmissionClassification UTF8STRING DEFAULT 'low',
         vehicleHazmatClass UTF8STRING,
         vehicleNoiseEmitted INTEGER DEFAULT 80dB
     }
