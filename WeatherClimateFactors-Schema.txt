@@ -1,0 +1,18 @@
+WeatherClimateFactors DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+    WeatherClimateFactorParameters ::= SEQUENCE
+    {
+        maxWindSpeed ::= INTEGER DEFAULT 50,
+        actualWindSpeed ::= INTEGER,
+        minTemperature ::= INTEGER, DEFAULT -20,
+        actualTemperature ::= INTEGER,
+        maxTemperature ::= INTEGER, DEFAULT 40,
+        maxCoverSnow ::= INTEGER, DEFAULT 60,
+        actualSnowCover ::= INTEGER,
+        minSnowCover ::= INTEGER DEFAULT 30,
+        snowFallRate ::= INTEGER,
+        maxCoverWater ::= INTEGER DEFAULT 30,
+        maxCoverLeaves ::= INTEGER DEFAULT 80,
+        maxSlipperiness ::= INTEGER,
+        rainImpact ::= INTEGER
+    }

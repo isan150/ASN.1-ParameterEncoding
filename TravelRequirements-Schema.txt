@@ -1,0 +1,16 @@
+TravelRequirements DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+    TravelRequirementParameters ::= SEQUENCE
+    {
+        accessFootMaxSpeed ::= INTEGER DEFAULT 5,
+        accessAuxMinSpeed ::= INTEGER DEFAULT 10,
+        accessAuxMaxSpeed ::= INTEGER DEFAULT 25,
+        accessMaxLength ::= INTEGER DEFAULT 1200,
+        accessMaxWidth ::= INTEGER DEFAULT 800,
+        accessMinHeight ::= INTEGER DEFAULT 500,
+        accessMaxHeight ::= INTEGER DEFAULT 1600,
+        accessMaxWeight ::= INTEGER DEFAULT 100,
+        updateNoticeTime ::= INTEGER DEFAULT 72,
+        accessScheduleRequested ::= INTEGER,
+        accessScheduleOffered ::= INTEGER
+    }

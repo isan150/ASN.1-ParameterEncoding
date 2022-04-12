@@ -1,0 +1,14 @@
+PlaceDimensions DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+    PlaceDimensionParameters ::= SEQUENCE
+    {
+        pointLocation ::= INTEGER (10)
+        areaLocation ::= INTEGER (10),
+        dimensionLength ::= INTEGER (0..20),
+        dimensionWidth ::= INTEGER (0..10),
+        dimensionHeight ::= INTEGER (0..10),
+        weightLimit ::= INTEGER,
+        emissionLevel ::= ENUMERATED {Low(1), Free(2))},
+        Incremented from TS5206:1?
+    }
+ 

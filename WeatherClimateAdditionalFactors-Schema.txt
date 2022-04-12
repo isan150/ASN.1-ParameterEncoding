@@ -1,0 +1,7 @@
+WeatherClimateAdditionalFactors DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+    WeatherClimateAdditionalFactorParameters ::= SEQUENCE
+    {
+        windDirection ::= UTF8STRING OPTIONAL,
+        blowingSandDensity ::= INTEGER
+    }
