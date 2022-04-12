@@ -2,9 +2,10 @@ TravelPathDimensions DEFINITIONS AUTOMATIC TAGS::=
 BEGIN
     TravelDimensionParameters ::= SEQUENCE
     {
-        minWidthPath ::= INTEGER DEFAULT 1560,
-        minHeightPath ::= INTEGER DEFAULT 2010,
-        maxNarrowPass ::= INTEGER DEFAULT 20,
-        maxGrade ::= INTEGER DEFAULT 5,
-        waitingArea ::= INTEGER DEFAULT 2
+        minWidthPath INTEGER DEFAULT 1560,
+        minHeightPath INTEGER DEFAULT 2010,
+        maxNarrowPass INTEGER DEFAULT 20,
+        maxGrade INTEGER DEFAULT 5,
+        waitingArea INTEGER DEFAULT 2
     }
+END

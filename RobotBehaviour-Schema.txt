@@ -2,21 +2,22 @@ RobotBehaviour DEFINITIONS AUTOMATIC TAGS ::=
 BEGIN
     RobotBehaviourParameters ::= SEQUENCE
     {
-        travelFlag ::= UTF8String,
-        travelLights ::= UTF8String,
-        noticeLights ::= UTF8String,
-        viewingDistance ::= INTEGER DEFAULT 70,
-        mindB ::= INTEGER,
-        maxdB ::= INTEGER,
-        travelSide ::= INTEGER (-1..1) DEFAULT 1,
-        travelDirection ::= INTEGER (-1..1) DEFAULT 1,
-        travelReverseDistance ::= INTEGER DEFAULT 20,
-        soundMatrix ::= sound?
-        shyDistanceDynamic ::= INTEGER DEFAULT 600,
-        shyDistanceStatic ::= INTEGER DEFAULT 200,
-        shyDistanceStandBack ::= INTEGER DEFAULT 1800,
-        auxSpacingInterval ::= INTEGER DEFAULT 2000,
-        robotWaitForClearway ::= INTEGER DEFAULT 120,
-        robotWaitForPUDO ::= INTEGER DEFAULT 300,
-        midMountAllowed ::= BOOLEAN
+        travelFlag UTF8String,
+        travelLights UTF8String,
+        noticeLights UTF8String,
+        viewingDistance INTEGER DEFAULT 70,
+        mindB INTEGER,
+        maxdB INTEGER,
+        travelSide INTEGER (-1..1) DEFAULT 1,
+        travelDirection INTEGER (-1..1) DEFAULT 1,
+        travelReverseDistance INTEGER DEFAULT 20,
+        soundMatrix sound?
+        shyDistanceDynamic INTEGER DEFAULT 600,
+        shyDistanceStatic INTEGER DEFAULT 200,
+        shyDistanceStandBack INTEGER DEFAULT 1800,
+        auxSpacingInterval INTEGER DEFAULT 2000,
+        robotWaitForClearway INTEGER DEFAULT 120,
+        robotWaitForPUDO INTEGER DEFAULT 300,
+        midMountAllowed BOOLEAN
     }
+END

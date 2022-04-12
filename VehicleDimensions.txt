@@ -2,14 +2,15 @@ VehicleDimensions DEFINITIONS AUTOMATIC TAGS ::=
 BEGIN
     VechicleDimensionParameters ::= SEQUENCE
     {
-        vehicleLocationTarget ::= INTEGER,
-        vechicleLocationRadius ::= INTEGER DEFAULT 50,
-        vechicleLocationPolygon ::= INTEGER,
-        vehicleLength ::= INTEGER,
-        vehicleWidth ::= INTEGER,
-        vehicleHeight ::= INTEGER,
-        vechicleGrossWeight ::= INTEGER,
-        vechicleEmissionClassification ::= UTF8STRING DEFAULT 'Low',
-        vehicleHazmatClass ::= UTF8STRING,
-        vehicleNoiseEmitted ::= INTEGER DEFAULT 80dB
+        vehicleLocationTarget INTEGER,
+        vechicleLocationRadius INTEGER DEFAULT 50,
+        vechicleLocationPolygon INTEGER,
+        vehicleLength INTEGER,
+        vehicleWidth INTEGER,
+        vehicleHeight INTEGER,
+        vechicleGrossWeight INTEGER,
+        vechicleEmissionClassification UTF8STRING DEFAULT 'Low',
+        vehicleHazmatClass UTF8STRING,
+        vehicleNoiseEmitted INTEGER DEFAULT 80dB
     }
+END
