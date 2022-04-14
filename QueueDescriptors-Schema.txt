@@ -1,0 +1,11 @@
+QueueDescriptors DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+    QueueDescriptorParameters ::= SEQUENCE
+    {
+        queueLengthCount INTEGER,
+        queueLengthTime INTEGER,
+        maxQueueLengthCount INTEGER,
+        maxQueueLengthTime INTEGER
+        --Others?--
+    }
+END

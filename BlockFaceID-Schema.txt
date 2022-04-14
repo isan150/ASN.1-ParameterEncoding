@@ -1,0 +1,6 @@
+BlockFaceID DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+
+    SSLR-ID ::= UTF8String
+
+END

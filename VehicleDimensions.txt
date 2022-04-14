@@ -9,8 +9,8 @@ BEGIN
         vehicleWidth INTEGER,
         vehicleHeight INTEGER,
         vechicleGrossWeight INTEGER,
-        vechicleEmissionClassification UTF8STRING DEFAULT 'low',
+        --vechicleEmissionClassification UTF8STRING DEFAULT low, (not sure why this isn't working)--
         vehicleHazmatClass UTF8STRING,
-        vehicleNoiseEmitted INTEGER DEFAULT 80dB
+        vehicleNoiseEmitted INTEGER DEFAULT 80
     }
 END
