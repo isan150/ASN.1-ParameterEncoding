@@ -1,0 +1,9 @@
+SidewalkSSLR ::= 
+{
+    two-way-street
+    {
+        sidewalkSegment BOOLEAN
+        numberOfSidewalks INTEGER
+        medianSidewalk BOOLEAN
+    }
+}

@@ -1,0 +1,59 @@
+CycleLaneSSLR ::=
+{
+    BidirectionalCycleLaneOneWay
+    {
+        reverseStreetRef: NULL
+
+        forwardCycleRef
+        {
+            right: Yes
+            median: NULL
+            left: NULL
+        }
+
+        reverseCycleRef
+        {
+            right: NULL
+            median: NULL
+            left: Yes
+        }
+    }
+
+    UnidirectionalCycleLaneTwoWay
+    {
+        reverseStreetRef: Yes
+
+        forwardCycleRef
+        {
+            right: Yes
+            median: NULL
+            left: NULL
+        }
+
+        reverseCycleRef
+        {
+            right: Yes
+            median: NULL
+            left: NULL
+        }
+    }
+
+    MedianCycleLaneTwoWay
+    {
+        reverseStreetRef: Yes
+
+        forwardCycleRef
+        {
+            right: NULL
+            median: Yes
+            left: NULL
+        }
+
+        reverseCycleRef
+        {
+            right: NULL
+            median: Yes
+            left: NULL
+        }
+    }
+}
