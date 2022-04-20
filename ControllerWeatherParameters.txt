@@ -1,0 +1,11 @@
+ControllerWeatherParameters DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+    ControllerWeatherParameters ::= SEQUENCE
+    {
+        currentWindSpeed INTEGER,
+        currentTemperature INTEGER,
+        currentSnowCover INTEGER,
+        snowFallRate INTEGER,
+        rainImpact INTEGER
+    }
+END

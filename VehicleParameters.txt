@@ -1,0 +1,16 @@
+VehicleParameters DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+    VechicleDimensionParameters ::= SEQUENCE
+    {
+        vehicleLocationTarget INTEGER,
+        --vehicleLocationRadius INTEGER DEFAULT 50, (only used for parking autonomous vehicles)--
+        vehicleLocationPolygon INTEGER OPTIONAL,
+        vehicleLength INTEGER,
+        vehicleWidth INTEGER,
+        vehicleHeight INTEGER,
+        vehicleGrossWeight INTEGER,
+        --vehicleEmissionClassification UTF8STRING DEFAULT low, (not sure why this isn't working)--
+        vehicleHazmatClass UTF8STRING,
+        vehicleNoiseEmitted INTEGER DEFAULT 80
+    }
+END
