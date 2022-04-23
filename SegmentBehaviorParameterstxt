@@ -1,6 +1,6 @@
-RobotBehaviour DEFINITIONS AUTOMATIC TAGS ::=
+SegmentBehaviorParameters DEFINITIONS AUTOMATIC TAGS ::=
 BEGIN
-    RobotBehaviourParameters ::= SEQUENCE
+    SegmentBehaviourParameterList ::= SEQUENCE
     {
         travelFlag UTF8String,
         travelLights UTF8String,

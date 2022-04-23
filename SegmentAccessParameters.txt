@@ -1,10 +1,12 @@
-TravelRequirements DEFINITIONS AUTOMATIC TAGS ::=
+SegmentAccessParameters DEFINITIONS AUTOMATIC TAGS ::=
 BEGIN
-    TravelRequirementParameters ::= SEQUENCE
+    SegmentAccessParameterList ::= SEQUENCE
     {
         accessFootMaxSpeed INTEGER DEFAULT 5,
         accessAuxMinSpeed INTEGER DEFAULT 10,
         accessAuxMaxSpeed INTEGER DEFAULT 25,
+        accessFootMaxStop INTEGER,
+        accessAuxMaxStop INTEGER,
         accessMaxLength INTEGER DEFAULT 1200,
         accessMaxWidth INTEGER DEFAULT 800,
         accessMinHeight INTEGER DEFAULT 500,
@@ -13,5 +15,9 @@ BEGIN
         updateNoticeTime INTEGER DEFAULT 72,
         accessScheduleRequested INTEGER,
         accessScheduleOffered INTEGER
+
+        --travelFlagRequired?--
+        --travelLightsRequired?--
+        --noticeLightsRequired?--
     }
 END

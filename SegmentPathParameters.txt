@@ -1,0 +1,13 @@
+SegmentPathParameters DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+{
+    SegmentPathParameterList ::= SEQUENCE
+    {
+        minWidthPath INTEGER,
+        minHeightPath INTEGER,
+        maxNarrowPass INTEGER,
+        --waitingArea--
+        segmentCapacity INTEGER
+    }
+}
+END

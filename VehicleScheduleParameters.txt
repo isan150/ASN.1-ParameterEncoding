@@ -1,0 +1,7 @@
+VehicleScheduleParameters DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+    ScheduleParameters ::= SEQUENCE
+    {
+        robotAccessScheduleRequested BOOLEAN
+    }
+END

@@ -1,0 +1,16 @@
+SegmentSurfaceParameters DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+    SegmentSurfaceParameterList ::= SEQUENCE
+    {
+        maxRoughness INTEGER,
+        minFirmness INTEGER,
+        minStability INTEGER,
+        minFriction INTEGER,
+        maxDeltaUnbeveled INTEGER,
+        maxDeltaBeveled INTEGER,
+        maxOpening INTEGER,
+        maxGrade INTEGER,
+        maxCrossGradient INTEGER,
+        isRailwayLevelCrossing BOOLEAN
+    }
+END

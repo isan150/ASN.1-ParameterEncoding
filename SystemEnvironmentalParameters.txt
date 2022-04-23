@@ -1,0 +1,13 @@
+SystemEnvironmentalParameters DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+{
+    System EnvironmentalParameterList ::= SEQUENCE
+    {
+        currentWindSpeed INTEGER,
+        currentTemperature INTEGER,
+        currentSnowFallRate INTEGER,
+        currentVisibility INTEGER,
+        minVisibility INTEGER
+    }
+}
+END

@@ -1,0 +1,14 @@
+VehicleEnvironmentalParameters DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN   
+    VehicleEnvironmentalParameterList ::= SEQUENCE
+    {
+        robotMaxWindSpeed INTEGER DEFAULT 50,
+        robotMinTemperature INTEGER DEFAULT -20,
+        robotMaxTemperature INTEGER DEFAULT 40,
+        robotMaxCoverSnow INTEGER DEFAULT 60,
+        robotMinSnowCover INTEGER DEFAULT 30,
+        robotMaxCoverWater INTEGER DEFAULT 30,
+        robotMaxCoverLeaves INTEGER DEFAULT 80,
+        maxSlipperiness INTEGER
+    }
+END

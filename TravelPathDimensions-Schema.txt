@@ -1,6 +1,6 @@
 TravelPathDimensions DEFINITIONS AUTOMATIC TAGS::=
 BEGIN
-    TravelDimensionParameters ::= SEQUENCE
+    TravelPathDimensionList ::= SEQUENCE
     {
         minWidthPath INTEGER DEFAULT 1560,
         minHeightPath INTEGER DEFAULT 2010,

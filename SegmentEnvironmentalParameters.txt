@@ -1,0 +1,11 @@
+SegmentEnvironmentalParameters DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+{
+    SegmentEnvironmentalParameterList ::= SEQUENCE
+    {
+        currentSnowCover INTEGER,
+        currentCoverWater INTEGER,
+        currentCoverLeaves INTEGER
+    }
+}
+END

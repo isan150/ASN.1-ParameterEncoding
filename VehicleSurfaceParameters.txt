@@ -1,0 +1,18 @@
+VehicleSurfaceParameters DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN   
+    VehicleSurfaceParameterList ::= SEQUENCE
+    {
+        robotMaxRoughness INTEGER (0..20),
+        robotMinFirmness INTEGER (0..5),
+        robotMinStability INTEGER (0..5),
+        robotMinFriction INTEGER (0..5),
+        maxDeltaUnbeveled  INTEGER,
+        maxDeltaBevelled INTEGER,
+        robotMaxOpening INTEGER,
+        robotMaxGrade INTEGER,
+        robotMaxCrossGradient INTEGER
+        --robotMaxStep--
+        kerbHeightBegin INTEGER DEFAULT 100,
+        kerbHeightEnd INTEGER DEFAULT 100,
+    }
+END
