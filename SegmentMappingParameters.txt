@@ -1,0 +1,21 @@
+SegmentMappingParameters DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+{
+    SegmentMappingParameterList ::= SEQUENCE
+    {
+        referenceID UTF8STRING,
+        geometryID UTF8STRING,
+    }
+    END
+    RoadClass ::= SEQUENCE
+    {
+        footway BOOLEAN,
+        cycleway BOOLEAN,
+        roadway BOOLEAN
+    }
+    CarriageWayLocation ::= ENUMERATED
+    {
+        right, right2, median, left, left2
+    }
+}
+END

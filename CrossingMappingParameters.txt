@@ -1,0 +1,8 @@
+CrossingMappingParameters DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+    CrossingMappingParameterList ::= SEQUENCE
+    {
+        connectingSegment1
+        connectingSegment2
+    }
+END

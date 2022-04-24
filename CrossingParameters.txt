@@ -1,0 +1,22 @@
+CrossingParameters DEFINTIONS AUTOMATIC TAGS ::=
+BEGIN
+    CrossingParameterList ::= SEQUENCE
+    {
+        maxRoughness INTEGER,
+        minFirmness INTEGER,
+        minStability INTEGER,
+        minFriction INTEGER,
+        maxDeltaUnbeveled INTEGER,
+        maxDeltaBeveled INTEGER,
+        maxOpening INTEGER,
+        maxGrade INTEGER,
+        maxCrossGradient INTEGER,
+        curbHeightStart INTEGER,
+        curbHeightEnd INTEGER,
+        sharedSignalCycle INTEGER, --might change--
+        remoteActivation BOOLEAN,
+        crossingLength INTEGER,
+        crossingWidth INTEGER,
+        crossingTiming INTEGER  --might change--
+    }
+END

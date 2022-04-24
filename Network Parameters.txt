@@ -1,0 +1,10 @@
+NetworkParameters DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+    NetworkParameterList ::= SEQUENCE
+    {
+      updateNoticeTime DATE-TIME, --Or Boolean?--
+      accessScheduleAvailable DATE-TIME, --Or Boolean?--
+      accessScheduleOffered BOOLEAN
+      --garbagePickupSchedule
+    }
+END
