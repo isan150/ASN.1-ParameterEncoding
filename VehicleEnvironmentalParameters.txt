@@ -9,6 +9,5 @@ BEGIN
         robotMinSnowCover INTEGER DEFAULT 30,
         robotMaxCoverWater INTEGER DEFAULT 30,
         robotMaxCoverLeaves INTEGER DEFAULT 80,
-        maxSlipperiness INTEGER
     }
 END

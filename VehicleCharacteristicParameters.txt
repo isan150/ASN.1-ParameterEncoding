@@ -16,7 +16,6 @@ BEGIN
 
         robotMaxSpeed INTEGER,
         robotWidth INTEGER,
-        robotHeight INTEGER,
         robotLength INTEGER,
         robotViewingDistance INTEGER,
 

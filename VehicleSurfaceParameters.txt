@@ -12,7 +12,7 @@ BEGIN
         robotMaxGrade INTEGER,
         robotMaxCrossGradient INTEGER
         --robotMaxStep--
-        kerbHeightBegin INTEGER DEFAULT 100,
-        kerbHeightEnd INTEGER DEFAULT 100,
+        --kerbHeightBegin INTEGER DEFAULT 100,--
+        --kerbHeightEnd INTEGER DEFAULT 100,--
     }
 END
