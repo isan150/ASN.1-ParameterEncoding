@@ -1,0 +1,73 @@
+AssessmentParameterSchema DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+    AssessmentParameter ::= SEQUENCE
+    {
+        --Segment Surface Parameters--
+
+        maxRoughness INTEGER,
+        minFirmness INTEGER,
+        minStability INTEGER,
+        minFriction INTEGER,
+        maxDeltaUnbeveled INTEGER,
+        maxDeltaBeveled INTEGER,
+        maxOpening INTEGER,
+        maxGrade INTEGER,
+        maxCrossGradient INTEGER,
+        isRailwayLevelCrossing BOOLEAN,
+
+        --Segment Path Parameters--
+
+        minWidthPath INTEGER,
+        minHeightPath INTEGER,
+        maxNarrowPass INTEGER,
+        --waitingArea--
+        segmentCapacity INTEGER,
+
+        --Segment Access Parameters--
+
+        accessAuxMinSpeed INTEGER DEFAULT 10,
+        accessMaxLength INTEGER DEFAULT 1200,
+        accessMaxWidth INTEGER DEFAULT 800,
+        accessMinHeight INTEGER DEFAULT 500,
+        accessMaxHeight INTEGER DEFAULT 1600,
+        accessMaxWeight INTEGER DEFAULT 100,
+        updateNoticeTime INTEGER DEFAULT 72,
+        accessScheduleRequested INTEGER,
+        accessScheduleOffered INTEGER,
+        --travelFlagRequired?--
+        --travelLightsRequired?--
+        --noticeLightsRequired?--
+
+        --Segment Behavior Parameters--
+        mindB INTEGER,
+
+        --System Environmental Parameters--
+
+        currentWindSpeed INTEGER,
+        currentTemperature INTEGER,
+        currentSnowFallRate INTEGER,
+        currentVisibility INTEGER,
+        minVisibility INTEGER,
+
+        -- Segment Environmental Parameters--
+
+        currentSnowCover INTEGER,
+        currentCoverWater INTEGER,
+        currentCoverLeaves INTEGER,
+
+        --Crossing Parameters--
+        maxRoughness INTEGER,
+        minFirmness INTEGER,
+        minStability INTEGER,
+        minFriction INTEGER,
+        maxDeltaUnbeveled INTEGER,
+        maxDeltaBeveled INTEGER,
+        maxOpening INTEGER,
+        maxGrade INTEGER,
+        maxCrossGradient INTEGER,
+        curbHeightStart INTEGER,
+        curbHeightEnd INTEGER,
+        remoteActivation BOOLEAN,
+         crossingWidth INTEGER
+    }
+END

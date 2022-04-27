@@ -1,0 +1,54 @@
+TripPlanRequestSchema DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+    TripRequest ::= SEQUENCE
+    {
+        --Vehicle Surface Parameters--
+
+        robotMaxRoughness INTGER,
+        robotMinFirmness INTEGER,
+        robotMinStability INTEGER,
+        robotMinFriction INTEGER,
+        maxDeltaUnbeveled INTEGER,
+        maxDeltaBevelled INTEGER,
+        robotMaxOpening INTEGER,
+        robotMaxGrade INTEGER,
+        robotMaxCrossGradient INTEGER,
+        --robotMaxStep INTEGER,--
+
+        --Vehicle Characteristic Parameters--
+
+        robotMaxSpeed INTEGER,
+        robotWidth INTEGER,
+        robotLength INTEGER,
+        robotViewingDistance INTEGER,
+        robotEmissionsClass UTF8String,
+        robotHazmatClass UTF8String,
+        --robotTravelFlag--
+        --robotTravelLights UTF8String--
+        --robotNoticeLights UTF8String--
+        robotMaxDB INTEGER,
+        robotRemoteActivation BOOLEAN,
+
+        --Vehicle Environmental Parameters--
+
+        robotMaxWindSpeed INTEGER DEFAULT 50,
+        robotMinTemperature INTEGER DEFAULT -20,
+        robotMaxTemperature INTEGER DEFAULT 40,
+        robotMaxCoverSnow INTEGER DEFAULT 60,
+        robotMinSnowCover INTEGER DEFAULT 30,
+        robotMaxCoverWater INTEGER DEFAULT 30,
+        robotMaxCoverLeaves INTEGER DEFAULT 80,
+
+        --Vehicle Location Parameters--
+
+        robotStartLocation UTF8String,
+        robotLocationTarget UTF8String,
+        robotLocationRadius INTEGER,
+        robotNextLocationTarget UTF8String,
+        robotNextLocationRadius INTEGER
+
+        --Vehicle Schedule Parameters--
+
+        robotAccessScheduleRequested BOOLEAN,
+        robotTripEndPreference UTF8String
+    }

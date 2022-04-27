@@ -8,6 +8,6 @@ BEGIN
         robotMaxCoverSnow INTEGER DEFAULT 60,
         robotMinSnowCover INTEGER DEFAULT 30,
         robotMaxCoverWater INTEGER DEFAULT 30,
-        robotMaxCoverLeaves INTEGER DEFAULT 80,
+        robotMaxCoverLeaves INTEGER DEFAULT 80
     }
 END

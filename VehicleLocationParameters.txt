@@ -1,0 +1,11 @@
+VehicleLocationParameters DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+    VehicleLocationParameterList ::= SEQUENCE
+    {
+        robotStartLocation UTF8String,
+        robotLocationTarget UTF8String,
+        robotLocationRadius INTEGER,
+        robotNextLocationTarget UTF8String,
+        robotNextLocationRadius INTEGER
+    }
+END

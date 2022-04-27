@@ -13,7 +13,7 @@ BEGIN
         maxCrossGradient INTEGER,
         curbHeightStart INTEGER,
         curbHeightEnd INTEGER,
-        sharedSignalCycle INTEGER, --might change--
+        sharedSignalCycle BOOLEAN,
         remoteActivation BOOLEAN,
         crossingLength INTEGER,
         crossingWidth INTEGER,
