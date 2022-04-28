@@ -1,0 +1,9 @@
+TrafficControllerBackendParametersSchema DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+    TrafficControllerBackendParameters ::= SEQUENCE
+    {
+        updateNoticeTime DATE-TIME,
+        accessScheduleAvailable DATE-TIME
+        --garbagePickupSchedule DATE-TIME--
+    }
+END

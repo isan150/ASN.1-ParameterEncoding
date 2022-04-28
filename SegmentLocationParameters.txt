@@ -1,0 +1,8 @@
+SegmentLocationParameters DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+    SegmentLocationParameterList ::= SEQUENCE
+    {
+        robotDestinationLocation UTF8String,
+        robotHoldingLocation UTF8String
+    }
+END

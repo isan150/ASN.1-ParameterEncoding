@@ -1,0 +1,69 @@
+TripPlanParametersSchema DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+    TripPlanParameters ::= SEQUENCE
+    {
+        --Segment Access Parameters--
+        acessFootMaxSpeed INTEGER,
+        accessAuxMinSpeed INTEGER,
+        accessAuxMaxSpeed INTEGER,
+        accessFootMaxStop INTEGER,
+        accessAuxMaxStop INTEGER,
+
+        --Segment Behavior Parameters--
+        mindB INTEGER,
+        maxdB INTEGER,
+        travelSide INTEGER (-1..1) DEFAULT 1,
+        travelDirection INTEGER (-1..1) DEFAULT 1,
+        travelReverseDistance INTEGER DEFAULT 20,
+        shyDistanceDynamic INTEGER DEFAULT 600,
+        shyDistanceStatic INTEGER DEFAULT 200,
+        shyDistanceStandBack INTEGER DEFAULT 1800,
+        auxSpacingInterval INTEGER DEFAULT 2000,
+        robotWaitForClearway INTEGER DEFAULT 120,
+        robotWaitForPUDO INTEGER DEFAULT 300,
+        midMountAllowed BOOLEAN,
+
+        --System Location Parameters--
+        robotDestinationLocation UTF8String,
+        robotHoldingLocation UTF8String,
+
+        --Segment Mapping Parameters--
+        referenceID UTF8String,
+        geometryID UTF8String,
+
+        --Network Parameters 1--
+        accessScheduleOffered BOOLEAN,
+
+        --Crossing Parameters--
+        sharedSignalCycle BOOLEAN,
+        remoteActivation BOOLEAN,
+        crossingLength INTEGER,
+        crossingTiming INTEGER
+    }
+
+    --Segment Mapping Parameters 2--
+
+    RoadClass ::= SEQUENCE
+    {
+        footway BOOLEAN,
+        cycleway BOOLEAN,
+        roadway BOOLEAN
+    }
+    CarriageWayLocation ::= ENUMERATED
+    {
+        right, right2, median, left, left2
+    }
+
+    --Crossing Mapping Parameters--
+    CrossingSegment1 ::= SEQUENCE
+    {
+        referenceID1 UTF8String,
+        geometryID1 UTF8String
+    }
+
+    CrossingSegment2 ::= SEQUENCE
+    {
+        referenceID2 UTF8String,
+        geometryID1 UTF8String
+    }
+END

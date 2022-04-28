@@ -1,8 +1,14 @@
 CrossingMappingParameters DEFINITIONS AUTOMATIC TAGS ::=
 BEGIN
-    CrossingMappingParameterList ::= SEQUENCE
+    CrossingSegment1 ::= SEQUENCE
     {
-        connectingSegment1
-        connectingSegment2
+        referenceID1 UTF8String,
+        geometryID1 UTF8String
+    }
+
+    CrossingSegment2 ::= SEQUENCE
+    {
+        referenceID2 UTF8String,
+        geometryID1 UTF8String
     }
 END
