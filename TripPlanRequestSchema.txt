@@ -4,7 +4,7 @@ BEGIN
     {
         --Vehicle Surface Parameters--
 
-        robotMaxRoughness INTGER,
+        robotMaxRoughness INTEGER,
         robotMinFirmness INTEGER,
         robotMinStability INTEGER,
         robotMinFriction INTEGER,
@@ -45,10 +45,11 @@ BEGIN
         robotLocationTarget UTF8String,
         robotLocationRadius INTEGER,
         robotNextLocationTarget UTF8String,
-        robotNextLocationRadius INTEGER
+        robotNextLocationRadius INTEGER,
 
         --Vehicle Schedule Parameters--
 
         robotAccessScheduleRequested BOOLEAN,
         robotTripEndPreference UTF8String
     }
+END
