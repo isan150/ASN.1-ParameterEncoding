@@ -56,14 +56,6 @@ BEGIN
         currentCoverLeaves INTEGER,
 
         --Crossing Parameters--
-        maxRoughness INTEGER,
-        minFirmness INTEGER,
-        minStability INTEGER,
-        minFriction INTEGER,
-        maxDeltaUnbeveled INTEGER,
-        maxDeltaBeveled INTEGER,
-        maxOpening INTEGER,
-        maxGrade INTEGER,
         maxCrossGradient INTEGER,
         curbHeightStart INTEGER,
         curbHeightEnd INTEGER,
