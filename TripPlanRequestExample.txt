@@ -1,0 +1,55 @@
+TripPlanRequestExample DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+    TripRequest ::= SEQUENCE
+    {
+        --Vehicle Surface Parameters--
+
+        robotMaxRoughness INTEGER DEFAULT 5,
+        robotMinFirmness INTEGER DEFAULT 3,
+        robotMinStability INTEGER DEFAULT 3,
+        robotMinFriction INTEGER DEFAULT 2,
+        maxDeltaUnbeveled INTEGER DEFAULT 6,
+        maxDeltaBevelled INTEGER DEFAULT 13,
+        robotMaxOpening INTEGER DEFAULT 2,
+        robotMaxGrade INTEGER DEFAULT 5,
+        robotMaxCrossGradient INTEGER DEFAULT 1,
+        --robotMaxStep INTEGER,--
+
+        --Vehicle Characteristic Parameters--
+
+        robotMaxSpeed INTEGER DEFAULT 5,
+        robotWidth INTEGER DEFAULT 800, --in mm--
+        robotLength INTEGER DEFAULT 1200, --in mm--
+        robotViewingDistance INTEGER DEFAULT 70, --in m--
+        robotEmissionsClass UTF8String DEFAULT "Low",
+        robotHazmatClass UTF8String,
+        --robotTravelFlag--
+        --robotTravelLights UTF8String--
+        --robotNoticeLights UTF8String--
+        robotMaxDB INTEGER,
+        robotRemoteActivation BOOLEAN,
+
+        --Vehicle Environmental Parameters--
+
+        robotMaxWindSpeed INTEGER DEFAULT 50,
+        robotMinTemperature INTEGER DEFAULT -20,
+        robotMaxTemperature INTEGER DEFAULT 40,
+        robotMaxCoverSnow INTEGER DEFAULT 60,
+        robotMinSnowCover INTEGER DEFAULT 30,
+        robotMaxCoverWater INTEGER DEFAULT 30,
+        robotMaxCoverLeaves INTEGER DEFAULT 80,
+
+        --Vehicle Location Parameters--
+
+        robotStartLocation UTF8String DEFAULT "Juke Fried Chicken",
+        robotLocationTarget UTF8String DEFAULT "688 Abbott St.",
+        robotLocationRadius INTEGER,
+        robotNextLocationTarget UTF8String,
+        robotNextLocationRadius INTEGER,
+
+        --Vehicle Schedule Parameters--
+
+        robotAccessScheduleRequested BOOLEAN,
+        robotTripEndPreference UTF8String
+    }
+END
