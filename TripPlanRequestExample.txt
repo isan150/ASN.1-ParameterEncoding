@@ -43,9 +43,9 @@ BEGIN
 
         robotStartLocation UTF8String DEFAULT "Juke Fried Chicken",
         robotLocationTarget UTF8String DEFAULT "688 Abbott St.",
-        robotLocationRadius INTEGER,
+        robotLocationRadius INTEGER DEFAULT 50, --in metres--
         robotNextLocationTarget UTF8String,
-        robotNextLocationRadius INTEGER,
+        robotNextLocationRadius INTEGER DEFAULT 50, --in metres--
 
         --Vehicle Schedule Parameters--
 
