@@ -26,7 +26,7 @@ BEGIN
         --robotTravelFlag--
         --robotTravelLights UTF8String--
         --robotNoticeLights UTF8String--
-        robotMaxDB INTEGER,
+        robotMaxDB INTEGER DEFAULT 2,
         robotRemoteActivation BOOLEAN,
 
         --Vehicle Environmental Parameters--

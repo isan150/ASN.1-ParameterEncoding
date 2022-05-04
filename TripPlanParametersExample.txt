@@ -10,8 +10,8 @@ BEGIN
         accessAuxMaxStop INTEGER,
 
         --Segment Behavior Parameters--
-        mindB INTEGER,
-        maxdB INTEGER,
+        mindB INTEGER DEFAULT 2,
+        maxdB INTEGER DEFAULT 6,
         travelSide INTEGER (-1..1) DEFAULT 1,
         travelDirection INTEGER (-1..1) DEFAULT 1,
         travelReverseDistance INTEGER DEFAULT 20,
@@ -28,7 +28,7 @@ BEGIN
         robotHoldingLocation UTF8String DEFAULT "Parking Indigo Vancouver Lot 038 - Rogers Arena East Lot,
 
         --Segment Mapping Parameters--
-        referenceID UTF8String,
+        referenceID UTF8String DEFAULT "ZBDsGT315NfaqoK321SH5L",
         geometryID UTF8String DEFAULT "YwAZBq1HdnLuLiAG8Jbs4L",
 
         --Network Parameters 1--
@@ -57,13 +57,13 @@ BEGIN
     --Crossing Mapping Parameters--
     CrossingSegment1 ::= SEQUENCE
     {
-        referenceID1 UTF8String,
-        geometryID1 UTF8String
+        referenceID1 UTF8String DEFAULT "MLWWr3499dSfxzGfwqQ2",
+        geometryID1 UTF8String DEFAULT "TdzqNt61HQJn2qZBfe6u7A"
     }
 
     CrossingSegment2 ::= SEQUENCE
     {
-        referenceID2 UTF8String,
-        geometryID1 UTF8String
+        referenceID2 UTF8String DEFAULT "GG53Dsq1czsfwR3G78JAq1",
+        geometryID1 UTF8String DEFAULT "P5esO1T3NdSwW2IZvDFI90"
     }
 END
