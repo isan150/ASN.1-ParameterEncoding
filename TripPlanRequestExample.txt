@@ -22,29 +22,29 @@ BEGIN
         robotLength INTEGER,
         robotViewingDistance INTEGER,
         robotEmissionsClass UTF8String,
-        robotHazmatClass UTF8String DEFAULT "Non-hazardous",
+        robotHazmatClass UTF8String  "Non-hazardous",
         --robotTravelFlag--
         --robotTravelLights UTF8String--
         --robotNoticeLights UTF8String--
         robotMaxDB INTEGER,
-        robotRemoteActivation BOOLEAN DEFAULT FALSE,
+        robotRemoteActivation BOOLEAN  FALSE,
 
         --Vehicle Environmental Parameters--
 
-        robotMaxWindSpeed INTEGER DEFAULT 50,
-        robotMinTemperature INTEGER DEFAULT -20,
-        robotMaxTemperature INTEGER DEFAULT 40,
-        robotMaxCoverSnow INTEGER DEFAULT 60,
-        robotMinSnowCover INTEGER DEFAULT 30,
-        robotMaxCoverWater INTEGER DEFAULT 30,
-        robotMaxCoverLeaves INTEGER DEFAULT 80,
+        robotMaxWindSpeed INTEGER  50,
+        robotMinTemperature INTEGER  -20,
+        robotMaxTemperature INTEGER  40,
+        robotMaxCoverSnow INTEGER  60,
+        robotMinSnowCover INTEGER  30,
+        robotMaxCoverWater INTEGER  30,
+        robotMaxCoverLeaves INTEGER  80,
 
         --Vehicle Location Parameters--
 
-        robotStartLocation UTF8String DEFAULT "49.27935685905908, -123.10028565915627",
-        robotLocationTarget UTF8String DEFAULT "49.27893176952682, -123.10742045917578",
-        robotLocationRadius INTEGER DEFAULT 10, --in metres--
-        robotNextLocationTarget UTF8String DEFAULT "49.27777506331143, -123.10695665384762", --The parking lot--
+        robotStartLocation UTF8String  "49.27935685905908, -123.10028565915627",
+        robotLocationTarget UTF8String  "49.27893176952682, -123.10742045917578",
+        robotLocationRadius INTEGER  10, --in metres--
+        robotNextLocationTarget UTF8String  "49.27777506331143, -123.10695665384762", --The parking lot--
         robotNextLocationRadius INTEGER,
 
         --Vehicle Schedule Parameters--
