@@ -28,7 +28,7 @@ BEGIN
         robotHoldingLocation UTF8String DEFAULT "Parking Indigo Vancouver Lot 038 - Rogers Arena East Lot,
 
         --Segment Mapping Parameters--
-        referenceID UTF8String DEFAULT "ZBDsGT315NfaqoK321SH5L",
+        referenceID UTF8String DEFAULT "zBDsGT315NfaqoK321SH5L",
         geometryID UTF8String DEFAULT "YwAZBq1HdnLuLiAG8Jbs4L",
 
         --Network Parameters 1--
@@ -45,9 +45,9 @@ BEGIN
 
     RoadClass ::= SEQUENCE
     {
-        footway BOOLEAN,
-        cycleway BOOLEAN,
-        roadway BOOLEAN
+        footway BOOLEAN DEFAULT TRUE,
+        cycleway BOOLEAN DEFAULT TRUE,
+        roadway BOOLEAN DEFAULT FALSE
     }
     CarriageWayLocation ::= ENUMERATED
     {
@@ -65,5 +65,29 @@ BEGIN
     {
         referenceID2 UTF8String DEFAULT "GG53Dsq1czsfwR3G78JAq1",
         geometryID1 UTF8String DEFAULT "P5esO1T3NdSwW2IZvDFI90"
+    }
+
+    CrossingSegment3 ::= SEQUENCE
+    {
+        referenceID3 UTF8String DEFAULT "Tw35scxJD3234DGXFgfdE2",
+        geometryID3 UTF8String DEFAULT "LkuyT3456791BCDWahgxbn"
+    }
+
+    CrossingSegment4 ::= SEQUENCE
+    {
+        referenceID4 UTF8String DEFAULT "SSy42dSmnLae3Rq1NbmKt8",
+        geometryID4 UTF8String DEFAULT "I93GBFcxzdmJ655Gkjkw12"
+    }
+
+    CrossingSegment5 ::= SEQUENCE
+    {
+        referenceID5 UTF8String DEFAULT "nYeA4544HKmbbHFyqHe7",
+        geometryID5 UTF8String DEFAULT "pqoZfv44H7L1Y5txNbae0Q"
+    }
+
+    CrossingSegment5 ::= SEQUENCE
+    {
+        referenceID5 UTF8String DEFAULT "Umdmm664120PxdwJgdsNm9",
+        geometryID5 UTF8String DEFAULT "lwsbGa8555XZBSfblqrytw"
     }
 END
