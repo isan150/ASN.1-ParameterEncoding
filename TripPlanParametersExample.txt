@@ -2,92 +2,295 @@ TripPlanParametersExample DEFINITIONS AUTOMATIC TAGS ::=
 BEGIN
     TripPlanParameters ::= SEQUENCE
     {
-        --Segment Access Parameters--
-        acessFootMaxSpeed INTEGER DEFAULT 5,
-        accessAuxMinSpeed INTEGER DEFAULT 10,
-        accessAuxMaxSpeed INTEGER DEFAULT 25,
-        accessFootMaxStop INTEGER,
-        accessAuxMaxStop INTEGER,
-
-        --Segment Behavior Parameters--
-        mindB INTEGER DEFAULT 2,
-        maxdB INTEGER DEFAULT 6,
-        travelSide INTEGER (-1..1) DEFAULT 1,
-        travelDirection INTEGER (-1..1) DEFAULT 1,
-        travelReverseDistance INTEGER DEFAULT 20,
-        shyDistanceDynamic INTEGER DEFAULT 600,
-        shyDistanceStatic INTEGER DEFAULT 200,
-        shyDistanceStandBack INTEGER DEFAULT 1800,
-        auxSpacingInterval INTEGER DEFAULT 2000,
-        robotWaitForClearway INTEGER DEFAULT 120,
-        robotWaitForPUDO INTEGER DEFAULT 300,
-        midMountAllowed BOOLEAN,
-
         --System Location Parameters--
         robotDestinationLocation UTF8String DEFAULT "688 Abbott St.",
-        robotHoldingLocation UTF8String DEFAULT "Parking Indigo Vancouver Lot 038 - Rogers Arena East Lot,
-
-        --Segment Mapping Parameters--
-        referenceID UTF8String DEFAULT "zBDsGT315NfaqoK321SH5L",
-        geometryID UTF8String DEFAULT "YwAZBq1HdnLuLiAG8Jbs4L",
 
         --Network Parameters 1--
         accessScheduleOffered BOOLEAN,
+
+        robotHoldingLocation UTF8String DEFAULT "Parking Indigo Vancouver Lot 038 - Rogers Arena East Lot,
+
+        Segment1 ::= SEQUENCE
+        {
+            --Segment Access Parameters--
+            acessFootMaxSpeed INTEGER DEFAULT 5,
+            accessAuxMinSpeed INTEGER DEFAULT 10,
+            accessAuxMaxSpeed INTEGER DEFAULT 25,
+            accessFootMaxStop INTEGER,
+            accessAuxMaxStop INTEGER,
+
+            --Segment Behavior Parameters--
+            mindB INTEGER DEFAULT 2,
+            maxdB INTEGER DEFAULT 6,
+            travelSide INTEGER (-1..1) DEFAULT 1,
+            travelDirection INTEGER (-1..1) DEFAULT 1,
+            travelReverseDistance INTEGER DEFAULT 20,
+            shyDistanceDynamic INTEGER DEFAULT 600,
+            shyDistanceStatic INTEGER DEFAULT 200,
+            shyDistanceStandBack INTEGER DEFAULT 1800,
+            auxSpacingInterval INTEGER DEFAULT 2000,
+            robotWaitForClearway INTEGER DEFAULT 120,
+            robotWaitForPUDO INTEGER DEFAULT 300,
+            midMountAllowed BOOLEAN,
+
+            --Segment Mapping Parameters--
+            referenceID UTF8String DEFAULT "zBDsGT315NfaqoK321SH5L",
+            geometryID UTF8String DEFAULT "YwAZBq1HdnLuLiAG8Jbs4L"
+
+            RoadClass ::= SEQUENCE
+            {
+                footway BOOLEAN DEFAULT TRUE,
+                cycleway BOOLEAN DEFAULT TRUE,
+                roadway BOOLEAN DEFAULT FALSE
+            }
+
+            CarriageWayLocation ::= ENUMERATED
+            {
+                right, right2, median, left, left2
+            }
+
+            --Crossing Mapping Parameters--
+            CrossingSegment1 ::= SEQUENCE
+            {
+                referenceID1 UTF8String DEFAULT "MLWWr3499dSfxzGfwqQ2",
+                geometryID1 UTF8String DEFAULT "TdzqNt61HQJn2qZBfe6u7A"
+            }
+        }
+
+        Segment 2 ::= SEQUENCE
+        {
+            --Segment Access Parameters--
+            acessFootMaxSpeed INTEGER DEFAULT 5,
+            accessAuxMinSpeed INTEGER DEFAULT 10,
+            accessAuxMaxSpeed INTEGER DEFAULT 25,
+            accessFootMaxStop INTEGER,
+            accessAuxMaxStop INTEGER,
+
+            --Segment Behavior Parameters--
+            mindB INTEGER DEFAULT 2,
+            maxdB INTEGER DEFAULT 6,
+            travelSide INTEGER (-1..1) DEFAULT 1,
+            travelDirection INTEGER (-1..1) DEFAULT 1,
+            travelReverseDistance INTEGER DEFAULT 20,
+            shyDistanceDynamic INTEGER DEFAULT 600,
+            shyDistanceStatic INTEGER DEFAULT 200,
+            shyDistanceStandBack INTEGER DEFAULT 1800,
+            auxSpacingInterval INTEGER DEFAULT 2000,
+            robotWaitForClearway INTEGER DEFAULT 120,
+            robotWaitForPUDO INTEGER DEFAULT 300,
+            midMountAllowed BOOLEAN,
+
+            --Segment Mapping Parameters--
+            referenceID UTF8String DEFAULT "zBDsGT315NfaqoK321SH5L",
+            geometryID UTF8String DEFAULT "YwAZBq1HdnLuLiAG8Jbs4L"
+
+            RoadClass ::= SEQUENCE
+            {
+                footway BOOLEAN DEFAULT TRUE,
+                cycleway BOOLEAN DEFAULT TRUE,
+                roadway BOOLEAN DEFAULT FALSE
+            }
+
+            CarriageWayLocation ::= ENUMERATED
+            {
+                right, right2, median, left, left2
+            }
+
+            CrossingSegment2 ::= SEQUENCE
+            {
+                referenceID2 UTF8String DEFAULT "GG53Dsq1czsfwR3G78JAq1",
+                geometryID1 UTF8String DEFAULT "P5esO1T3NdSwW2IZvDFI90"
+            }
+        }
+
+        Segment3 ::= SEQUENCE
+        {
+            --Segment Access Parameters--
+            acessFootMaxSpeed INTEGER DEFAULT 5,
+            accessAuxMinSpeed INTEGER DEFAULT 10,
+            accessAuxMaxSpeed INTEGER DEFAULT 25,
+            accessFootMaxStop INTEGER,
+            accessAuxMaxStop INTEGER,
+
+            --Segment Behavior Parameters--
+            mindB INTEGER DEFAULT 2,
+            maxdB INTEGER DEFAULT 6,
+            travelSide INTEGER (-1..1) DEFAULT 1,
+            travelDirection INTEGER (-1..1) DEFAULT 1,
+            travelReverseDistance INTEGER DEFAULT 20,
+            shyDistanceDynamic INTEGER DEFAULT 600,
+            shyDistanceStatic INTEGER DEFAULT 200,
+            shyDistanceStandBack INTEGER DEFAULT 1800,
+            auxSpacingInterval INTEGER DEFAULT 2000,
+            robotWaitForClearway INTEGER DEFAULT 120,
+            robotWaitForPUDO INTEGER DEFAULT 300,
+            midMountAllowed BOOLEAN,
+
+            --Segment Mapping Parameters--
+            referenceID UTF8String DEFAULT "zBDsGT315NfaqoK321SH5L",
+            geometryID UTF8String DEFAULT "YwAZBq1HdnLuLiAG8Jbs4L"
+
+            RoadClass ::= SEQUENCE
+            {
+                footway BOOLEAN DEFAULT TRUE,
+                cycleway BOOLEAN DEFAULT TRUE,
+                roadway BOOLEAN DEFAULT FALSE
+            }
+
+            CarriageWayLocation ::= ENUMERATED
+            {
+                right, right2, median, left, left2
+            }
+
+            CrossingSegment3 ::= SEQUENCE
+            {
+                referenceID3 UTF8String DEFAULT "Tw35scxJD3234DGXFgfdE2",
+                geometryID3 UTF8String DEFAULT "LkuyT3456791BCDWahgxbn"
+            }
+        }
+
+        Segment4 ::= SEQUENCE
+        {
+            --Segment Access Parameters--
+            acessFootMaxSpeed INTEGER DEFAULT 5,
+            accessAuxMinSpeed INTEGER DEFAULT 10,
+            accessAuxMaxSpeed INTEGER DEFAULT 25,
+            accessFootMaxStop INTEGER,
+            accessAuxMaxStop INTEGER,
+
+            --Segment Behavior Parameters--
+            mindB INTEGER DEFAULT 2,
+            maxdB INTEGER DEFAULT 6,
+            travelSide INTEGER (-1..1) DEFAULT 1,
+            travelDirection INTEGER (-1..1) DEFAULT 1,
+            travelReverseDistance INTEGER DEFAULT 20,
+            shyDistanceDynamic INTEGER DEFAULT 600,
+            shyDistanceStatic INTEGER DEFAULT 200,
+            shyDistanceStandBack INTEGER DEFAULT 1800,
+            auxSpacingInterval INTEGER DEFAULT 2000,
+            robotWaitForClearway INTEGER DEFAULT 120,
+            robotWaitForPUDO INTEGER DEFAULT 300,
+            midMountAllowed BOOLEAN,
+
+            --Segment Mapping Parameters--
+            referenceID UTF8String DEFAULT "zBDsGT315NfaqoK321SH5L",
+            geometryID UTF8String DEFAULT "YwAZBq1HdnLuLiAG8Jbs4L"
+
+            RoadClass ::= SEQUENCE
+            {
+                footway BOOLEAN DEFAULT TRUE,
+                cycleway BOOLEAN DEFAULT TRUE,
+                roadway BOOLEAN DEFAULT FALSE
+            }
+
+            CarriageWayLocation ::= ENUMERATED
+            {
+                right, right2, median, left, left2
+            }
+
+            CrossingSegment4 ::= SEQUENCE
+            {
+                referenceID4 UTF8String DEFAULT "SSy42dSmnLae3Rq1NbmKt8",
+                geometryID4 UTF8String DEFAULT "I93GBFcxzdmJ655Gkjkw12"
+            }
+        }
+
+        Segment5 ::= SEQUENCE
+        {
+            --Segment Access Parameters--
+            acessFootMaxSpeed INTEGER DEFAULT 5,
+            accessAuxMinSpeed INTEGER DEFAULT 10,
+            accessAuxMaxSpeed INTEGER DEFAULT 25,
+            accessFootMaxStop INTEGER,
+            accessAuxMaxStop INTEGER,
+
+            --Segment Behavior Parameters--
+            mindB INTEGER DEFAULT 2,
+            maxdB INTEGER DEFAULT 6,
+            travelSide INTEGER (-1..1) DEFAULT 1,
+            travelDirection INTEGER (-1..1) DEFAULT 1,
+            travelReverseDistance INTEGER DEFAULT 20,
+            shyDistanceDynamic INTEGER DEFAULT 600,
+            shyDistanceStatic INTEGER DEFAULT 200,
+            shyDistanceStandBack INTEGER DEFAULT 1800,
+            auxSpacingInterval INTEGER DEFAULT 2000,
+            robotWaitForClearway INTEGER DEFAULT 120,
+            robotWaitForPUDO INTEGER DEFAULT 300,
+            midMountAllowed BOOLEAN,
+
+            --Segment Mapping Parameters--
+            referenceID UTF8String DEFAULT "zBDsGT315NfaqoK321SH5L",
+            geometryID UTF8String DEFAULT "YwAZBq1HdnLuLiAG8Jbs4L"
+
+            RoadClass ::= SEQUENCE
+            {
+                footway BOOLEAN DEFAULT TRUE,
+                cycleway BOOLEAN DEFAULT TRUE,
+                roadway BOOLEAN DEFAULT FALSE
+            }
+
+            CarriageWayLocation ::= ENUMERATED
+            {
+                right, right2, median, left, left2
+            }
+
+            CrossingSegment5 ::= SEQUENCE
+            {
+                referenceID5 UTF8String DEFAULT "nYeA4544HKmbbHFyqHe7",
+                geometryID5 UTF8String DEFAULT "pqoZfv44H7L1Y5txNbae0Q"
+            }
+        }
+
+        Segment6 ::= SEQUENCE
+        {
+            --Segment Access Parameters--
+            acessFootMaxSpeed INTEGER DEFAULT 5,
+            accessAuxMinSpeed INTEGER DEFAULT 10,
+            accessAuxMaxSpeed INTEGER DEFAULT 25,
+            accessFootMaxStop INTEGER,
+            accessAuxMaxStop INTEGER,
+
+            --Segment Behavior Parameters--
+            mindB INTEGER DEFAULT 2,
+            maxdB INTEGER DEFAULT 6,
+            travelSide INTEGER (-1..1) DEFAULT 1,
+            travelDirection INTEGER (-1..1) DEFAULT 1,
+            travelReverseDistance INTEGER DEFAULT 20,
+            shyDistanceDynamic INTEGER DEFAULT 600,
+            shyDistanceStatic INTEGER DEFAULT 200,
+            shyDistanceStandBack INTEGER DEFAULT 1800,
+            auxSpacingInterval INTEGER DEFAULT 2000,
+            robotWaitForClearway INTEGER DEFAULT 120,
+            robotWaitForPUDO INTEGER DEFAULT 300,
+            midMountAllowed BOOLEAN,
+
+            --Segment Mapping Parameters--
+            referenceID UTF8String DEFAULT "zBDsGT315NfaqoK321SH5L",
+            geometryID UTF8String DEFAULT "YwAZBq1HdnLuLiAG8Jbs4L"
+
+            RoadClass ::= SEQUENCE
+            {
+                footway BOOLEAN DEFAULT TRUE,
+                cycleway BOOLEAN DEFAULT TRUE,
+                roadway BOOLEAN DEFAULT FALSE
+            }
+
+            CarriageWayLocation ::= ENUMERATED
+            {
+                right, right2, median, left, left2
+            }
+
+             CrossingSegment6 ::= SEQUENCE
+            {
+                referenceID5 UTF8String DEFAULT "Umdmm664120PxdwJgdsNm9",
+                geometryID5 UTF8String DEFAULT "lwsbGa8555XZBSfblqrytw"
+            }
+        }
 
         --Crossing Parameters--
         sharedSignalCycle BOOLEAN,
         remoteActivation BOOLEAN,
         crossingLength INTEGER,
         crossingTiming INTEGER
-    }
-
-    --Segment Mapping Parameters 2--
-
-    RoadClass ::= SEQUENCE
-    {
-        footway BOOLEAN DEFAULT TRUE,
-        cycleway BOOLEAN DEFAULT TRUE,
-        roadway BOOLEAN DEFAULT FALSE
-    }
-    CarriageWayLocation ::= ENUMERATED
-    {
-        right, right2, median, left, left2
-    }
-
-    --Crossing Mapping Parameters--
-    CrossingSegment1 ::= SEQUENCE
-    {
-        referenceID1 UTF8String DEFAULT "MLWWr3499dSfxzGfwqQ2",
-        geometryID1 UTF8String DEFAULT "TdzqNt61HQJn2qZBfe6u7A"
-    }
-
-    CrossingSegment2 ::= SEQUENCE
-    {
-        referenceID2 UTF8String DEFAULT "GG53Dsq1czsfwR3G78JAq1",
-        geometryID1 UTF8String DEFAULT "P5esO1T3NdSwW2IZvDFI90"
-    }
-
-    CrossingSegment3 ::= SEQUENCE
-    {
-        referenceID3 UTF8String DEFAULT "Tw35scxJD3234DGXFgfdE2",
-        geometryID3 UTF8String DEFAULT "LkuyT3456791BCDWahgxbn"
-    }
-
-    CrossingSegment4 ::= SEQUENCE
-    {
-        referenceID4 UTF8String DEFAULT "SSy42dSmnLae3Rq1NbmKt8",
-        geometryID4 UTF8String DEFAULT "I93GBFcxzdmJ655Gkjkw12"
-    }
-
-    CrossingSegment5 ::= SEQUENCE
-    {
-        referenceID5 UTF8String DEFAULT "nYeA4544HKmbbHFyqHe7",
-        geometryID5 UTF8String DEFAULT "pqoZfv44H7L1Y5txNbae0Q"
-    }
-
-    CrossingSegment5 ::= SEQUENCE
-    {
-        referenceID5 UTF8String DEFAULT "Umdmm664120PxdwJgdsNm9",
-        geometryID5 UTF8String DEFAULT "lwsbGa8555XZBSfblqrytw"
     }
 END
